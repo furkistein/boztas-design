@@ -501,7 +501,7 @@
     puanHalkasi();
     fiyatSayaci();
     kapanis();
-    girisBitinceBaslat(() => { harfIcindenGecis(); window.__kg.gecis = true; });
+    if (document.querySelector(".gecis-sar")) girisBitinceBaslat(() => { harfIcindenGecis(); window.__kg.gecis = true; });
     window.__kg = { hazir: true };
   };
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(baslat);

@@ -79,110 +79,46 @@
   <section id="isler" class="bolum portfoy" data-bolum="işler">
     <div class="bolum-bas">
       <div><span class="etiket">(01) işler</span><h2 data-parcacik>yaptığım <em>işler</em></h2></div>
-      <p>Web sitesinden oyuna, mobil uygulamadan otomasyona. Her kartta işin ne yaptığı ve dürüst bir durum etiketi var: yayında olan da, hâlâ yapılan da.</p>
+      <p>Altı başlık: hangisi ilginizi çekiyorsa tıklayın, o başlığın altındaki örnekleri görün. Her işte dürüst bir durum etiketi var: yayında olan da, hâlâ yapılan da.</p>
     </div>
-    <div class="sekmeler" role="tablist" aria-label="iş kategorileri"><button type="button" role="tab" id="sek-hepsi" data-filtre="hepsi" aria-selected="true" aria-controls="portfoy" tabindex="0">hepsi</button><button type="button" role="tab" id="sek-web" data-filtre="web" aria-selected="false" aria-controls="portfoy" tabindex="-1">web</button><button type="button" role="tab" id="sek-3b" data-filtre="3b" aria-selected="false" aria-controls="portfoy" tabindex="-1">3B &amp; animasyon</button><button type="button" role="tab" id="sek-mobil" data-filtre="mobil" aria-selected="false" aria-controls="portfoy" tabindex="-1">mobil</button><button type="button" role="tab" id="sek-oyun" data-filtre="oyun" aria-selected="false" aria-controls="portfoy" tabindex="-1">oyun</button><button type="button" role="tab" id="sek-yazilim" data-filtre="yazilim" aria-selected="false" aria-controls="portfoy" tabindex="-1">yazılım &amp; otomasyon</button><button type="button" role="tab" id="sek-video" data-filtre="video" aria-selected="false" aria-controls="portfoy" tabindex="-1">video &amp; hareket</button></div>
-    <p class="sayac" id="sayac" role="status" aria-live="polite"></p>
-    <div id="portfoy" class="portfoy-alan" role="tabpanel" aria-labelledby="sek-hepsi">
-    <div class="grup-baslik" data-grup="one"><span class="etiket">öne çıkanlar</span></div>
-    <div class="kart-izgara buyuk-izgara" data-grup="one">
-      <article class="kart buyuk" data-kat="oyun 3b">
-        <figure class="medya video"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/scrawl-dongu.webp" data-src="assets/video/scrawl-dongu.mp4"></video><img class="ek" src="assets/isler/scrawl-atolye.webp" alt="Scrawl Co. mağaza görseli" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum gelistiriliyor">geliştiriliyor</span><h3 translate="no">Scrawl Co.</h3><p>Çizdiğiniz her şeyin bir sorun olduğu, iki kişilik 3B kooperatif komedi. Dünyası ve sesi kodla üretilir; on iki dilde.</p><ul class="etiketler" aria-label="teknolojiler"><li>Unity 6</li><li>C#</li><li>HLSL</li><li>Netcode</li></ul></div>
-      </article>
-      <article class="kart buyuk" data-kat="web 3b">
-        <figure class="medya video"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/travertina-dongu.webp" data-src="assets/video/travertina-dongu.mp4"></video></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/premium-kafe/" target="_blank" rel="noopener">Travertina</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Pamukkale'den ilham alan bir kafe için 3B karşılama sahnesi, alerjen süzgeçli menü ve iki dokunuşta masa ayırtma. Örnek çalışma.</p><ul class="etiketler" aria-label="teknolojiler"><li>Three.js</li><li>GSAP</li><li>Vite</li></ul></div>
-      </article>
-      <article class="kart buyuk" data-kat="web yazilim">
-        <figure class="medya sema-kutu"><div class="sema" role="img" aria-label="Fiyat hesabı örneği: dükkân fiyatı 100 lira, kargo 25 lira, komisyon yüzde 15; satış fiyatı 147,06 lira">
-          <span class="sema-et">fiyat mantığı · örnek hesap</span>
-          <p class="sema-formul">(dükkân fiyatı <i>+</i> kargo) <i>÷</i> (1 <i>−</i> komisyon) <i>=</i> <em>satış fiyatı</em></p>
-          <div class="sema-satir"><span>dükkân fiyatı</span><b>100 TL</b></div>
-          <div class="sema-satir"><span>kargo</span><b>25 TL</b></div>
-          <div class="sema-satir"><span>komisyon</span><b>%15</b></div>
-          <div class="sema-satir son"><span>satış fiyatı</span><b>147,06 TL</b></div>
-          <p class="sema-not">Komisyon ve kargo satış fiyatına eklenir; dükkân fiyatı net kalır.</p>
-        </div></figure>
-        <div class="kart-govde"><span class="durum ic">iç kullanım</span><h3>E-ticaret sitesi ve satış hattı</h3><p>İsimsiz bir aile işletmesi için: ürünler, siparişler, ödeme seçenekleri, bayi fiyatları ve yönetim paneli tek sistemde.</p><ul class="etiketler" aria-label="teknolojiler"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>Prisma</li><li>Tailwind 4</li></ul></div>
-      </article>
-      <article class="kart buyuk" data-kat="yazilim">
-        <figure class="medya "><img src="assets/isler/haritalar-karnesi.webp" alt="Haritalar karnesi örnek raporunun ilk sayfası" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>Haritalar karnesi</h3><p>Bir işletmenin Google Haritalar profilini rakipleriyle yan yana okuyup puanlı karne çıkarır. Örnek rapor, kurgusal veri.</p><ul class="etiketler" aria-label="teknolojiler"><li>Yerel SEO</li><li>HTML</li><li>PDF rapor</li></ul></div>
-      </article>
-    </div>
-    <div class="grup-baslik" data-grup="diger"><span class="etiket">diğer işler</span></div>
-    <div class="kart-izgara" data-grup="diger">
-      <article class="kart" data-kat="oyun 3b web">
-        <figure class="medya "><img src="assets/isler/lily-3d.webp" alt="What's Wrong, Lily? oyun kapağı" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum test">test yayını</span><h3>What's Wrong, Lily?</h3><p>Tarayıcıda oynanan, rahat tonlu 3B bulmaca komedisi. Bir oyun portalında test yayını yapıldı (5.000+ oynama).</p><ul class="etiketler" aria-label="teknolojiler"><li>Three.js</li><li>VRM</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="oyun mobil web">
-        <figure class="medya "><img src="assets/isler/farkli-olani-bul.webp" alt="Farklı Olanı Bul oyunundan iki ekran" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum gelistiriliyor">geliştiriliyor</span><h3>Farklı Olanı Bul</h3><p>Aynı görünen emojiler arasından farklı olanı süreyle bulduran, telefona yüklenebilen hızlı bulmaca.</p><ul class="etiketler" aria-label="teknolojiler"><li>JavaScript</li><li>PWA</li><li>WebAudio</li></ul></div>
-      </article>
-      <article class="kart" data-kat="mobil yazilim">
-        <figure class="medya "><img src="assets/isler/barkod-pwa.webp" alt="Barkod uygulamasının iki ekranı, demo veriyle" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum ic">iç kullanım</span><h3>Barkodlu stok ve sepet</h3><p>Telefonla barkod okutup stok ve sepet hesaplayan, çevrimdışı çalışan, ortaklarla canlı eşitlenen uygulama. Görseller demo veriyle.</p><ul class="etiketler" aria-label="teknolojiler"><li>PWA</li><li>Firebase</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="yazilim">
-        <figure class="medya "><img src="assets/isler/wa-bot.webp" alt="Randevu botunun yönetim paneli, demo veriyle" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>WhatsApp randevu botu</h3><p>Müşteri numara yazarak randevu alır; işletme günlük programı yönetim panelinden görür. Kurgusal berber üzerinde demo.</p><ul class="etiketler" aria-label="teknolojiler"><li>Python</li><li>Flask</li><li>WhatsApp</li></ul></div>
-      </article>
-      <article class="kart" data-kat="yazilim mobil">
-        <figure class="medya sema-kutu"><div class="yer-tutucu" role="img" aria-label="Tanıtım videosu hazırlanıyor"><span>tanıtım videosu</span><b>hazırlanıyor</b></div></figure>
-        <div class="kart-govde"><span class="durum ic">iç kullanım</span><h3 translate="no">Jarvis</h3><p>Bilgisayarı ve telefonu sesle yöneten kişisel yapay zekâ asistanı.</p><ul class="etiketler" aria-label="teknolojiler"><li>Python</li><li>Flutter</li><li>Kotlin</li></ul></div>
-      </article>
-      <article class="kart" data-kat="yazilim">
-        <figure class="medya "><img src="assets/isler/silentbias.webp" alt="silentbias aracının terminal çıktısı" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum ic">iç kullanım</span><h3 translate="no">silentbias</h3><p>Kodda yalnız tek yöne yanlış çıkan hataları arayan, bağımlılıksız bir araç. Her kural, aradığı hatayı kendisi üreterek kanıtlanır.</p><ul class="etiketler" aria-label="teknolojiler"><li>Python</li><li>statik analiz</li></ul></div>
-      </article>
-      <article class="kart" data-kat="yazilim">
-        <figure class="medya "><img src="assets/isler/trendyol-analiz.webp" alt="Stok ve fiyat raporu, örnek veriyle" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>Stok ve fiyat asistanı</h3><p>Ürün başına net kazancı hesaplayıp zarar edenleri ve biten stokları günlük yapılacaklar listesine çevirir. Örnek veriyle.</p><ul class="etiketler" aria-label="teknolojiler"><li>Python</li><li>Excel</li><li>HTML rapor</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web mobil">
-        <figure class="medya "><img src="assets/isler/qr-menu.webp" alt="Alerjen süzgeçli QR menünün iki ekranı" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>QR menü</h3><p>Masadaki QR ile açılan, alerjene göre süzen, Türkçe ve İngilizce menü. Örnek çalışma.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web">
-        <figure class="medya "><img src="assets/isler/ornek-siteler.webp" alt="Örnek sitelerden altı kapak" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/" target="_blank" rel="noopener">Sektör örnekleri</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Kafe, kuaför, emlak, pilates ve daha fazlası için baştan kurgulanmış otuz beş örnek site.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web">
-        <figure class="medya "><img src="assets/isler/forno.webp" alt="forno sitesi" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/forno/" target="_blank" rel="noopener">forno</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Fırının açık mı kapalı mı olduğunu canlı gösteren, masa ayırtmayı öne alan pizzacı sitesi.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web">
-        <figure class="medya "><img src="assets/isler/mina.webp" alt="mina sitesi" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/mina/" target="_blank" rel="noopener">mina</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Dergi kapağı gibi açılan, randevuyu ilk ekrana taşıyan kuaför sitesi.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>GSAP</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web">
-        <figure class="medya "><img src="assets/isler/kuzey-emlak.webp" alt="kuzey emlak sitesi" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/kuzey-emlak/" target="_blank" rel="noopener">kuzey</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Ev aramayı tek forma indiren, ilanlardan önce güven veren emlak vitrini.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web">
-        <figure class="medya "><img src="assets/isler/villa.webp" alt="villa sitesi" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/villa/" target="_blank" rel="noopener">villa</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Manzarayı ilk saniyede gösteren, gösterim talebini doğrudan toplayan villa sitesi.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="web">
-        <figure class="medya "><img src="assets/isler/fadelab.webp" alt="fadelab sitesi" loading="lazy" width="1000" height="667"></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3><a href="https://furkistein.github.io/boztasdigital/fadelab/" target="_blank" rel="noopener">fadelab</a></h3><span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span><p>Dükkânın açık olup olmadığını anında söyleyen, koltuğu tek dokunuşla ayırtan berber sitesi.</p><ul class="etiketler" aria-label="teknolojiler"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
-      </article>
-      <article class="kart" data-kat="video">
-        <figure class="medya video dikey"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/01-logo-cift-igne-12sn.webp" data-src="assets/video/01-logo-cift-igne-12sn.mp4"></video></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>çifte iğne</h3><p>Logo animasyonu: tek fikir, iki renk, dolu bir son kare.</p><ul class="etiketler" aria-label="teknolojiler"><li>HyperFrames</li><li>ffmpeg</li><li>ses tasarımı</li></ul></div>
-      </article>
-      <article class="kart" data-kat="video">
-        <figure class="medya video dikey"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/02-cay-demlik-10sn.webp" data-src="assets/video/02-cay-demlik-10sn.mp4"></video></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>demlik</h3><p>Bir çay markası için kısa hikâye animasyonu.</p><ul class="etiketler" aria-label="teknolojiler"><li>HyperFrames</li><li>ffmpeg</li><li>ses tasarımı</li></ul></div>
-      </article>
-      <article class="kart" data-kat="video 3b web">
-        <figure class="medya video dikey"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/03-site-tanitim-15sn.webp" data-src="assets/video/03-site-tanitim-15sn.mp4"></video></figure>
-        <div class="kart-govde"><span class="durum konsept">konsept</span><h3>kınıklı evleri</h3><p>Bir sitenin tanıtımını on beş saniyede anlatan kısa video.</p><ul class="etiketler" aria-label="teknolojiler"><li>HyperFrames</li><li>ffmpeg</li><li>müzik</li></ul></div>
-      </article>
-    </div>
-    </div>
+    <nav class="kat-izgara-ana" aria-label="iş kategorileri">
+      <a class="kat kat-web" href="sayfalar/web.html">
+        <div class="kat-medya" aria-hidden="true"><img src="assets/isler/ornek-siteler.webp" alt="" loading="lazy" width="1000" height="667"></div>
+        <span class="kat-no" aria-hidden="true">(01)</span><span class="kat-sayi">08 iş</span>
+        <div class="kat-govde"><h3>web <em>siteleri</em></h3><p>Telefonda hızlı açılan, ilk ekranda işi bitiren siteler.</p></div>
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span>
+      </a>
+      <a class="kat kat-3b" href="sayfalar/3b-animasyon.html">
+        <div class="kat-medya" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/travertina-dongu.webp" data-src="assets/video/travertina-dongu.mp4"></video></div>
+        <span class="kat-no" aria-hidden="true">(02)</span><span class="kat-sayi">01 iş</span>
+        <div class="kat-govde"><h3>3B ve <em>animasyonlu web</em></h3><p>Tarayıcıda sinematik girişler ve etkileşimli 3B sahneler.</p></div>
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span>
+      </a>
+      <a class="kat kat-mobil" href="sayfalar/mobil.html">
+        <div class="kat-medya" aria-hidden="true"><img src="assets/isler/barkod-pwa.webp" alt="" loading="lazy" width="1000" height="667"></div>
+        <span class="kat-no" aria-hidden="true">(03)</span><span class="kat-sayi">01 iş</span>
+        <div class="kat-govde"><h3>mobil <em>uygulama</em></h3><p>Telefona yüklenen, çevrimdışı çalışan uygulamalar.</p></div>
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span>
+      </a>
+      <a class="kat kat-oyun" href="sayfalar/oyun.html">
+        <div class="kat-medya" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/scrawl-dongu.webp" data-src="assets/video/scrawl-dongu.mp4"></video></div>
+        <span class="kat-no" aria-hidden="true">(04)</span><span class="kat-sayi">03 iş</span>
+        <div class="kat-govde"><h3><em>oyun</em></h3><p>Kodla üretilen dünyalar: kooperatif komedi, tarayıcı bulmacaları.</p></div>
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span>
+      </a>
+      <a class="kat kat-yazilim" href="sayfalar/yazilim-otomasyon.html">
+        <div class="kat-medya" aria-hidden="true"><img src="assets/isler/silentbias.webp" alt="" loading="lazy" width="1000" height="667"></div>
+        <span class="kat-no" aria-hidden="true">(05)</span><span class="kat-sayi">05 iş</span>
+        <div class="kat-govde"><h3>yazılım ve <em>otomasyon</em></h3><p>Tekrarlayan işi programa devreden araçlar ve otomasyonlar.</p></div>
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span>
+      </a>
+      <a class="kat kat-video" href="sayfalar/video-hareket.html">
+        <div class="kat-medya" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/01-logo-cift-igne-12sn.webp" data-src="assets/video/01-logo-cift-igne-12sn.mp4"></video><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/02-cay-demlik-10sn.webp" data-src="assets/video/02-cay-demlik-10sn.mp4"></video><video muted loop playsinline preload="none" aria-hidden="true" poster="assets/video/03-site-tanitim-15sn.webp" data-src="assets/video/03-site-tanitim-15sn.mp4"></video></div>
+        <span class="kat-no" aria-hidden="true">(06)</span><span class="kat-sayi">03 iş</span>
+        <div class="kat-govde"><h3>video ve <em>hareket</em></h3><p>Logo, tanıtım ve sosyal medya için kısa, tek fikirli videolar.</p></div>
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 18 18" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14L14 4M6 4h8v8"/></svg></span>
+      </a>
+    </nav>
     <p class="not">Durum etiketleri gerçeği söyler: konsept çalışmalardaki markalar ve veriler kurgusaldır; gerçek işletme adı, fiyat ya da müşteri bilgisi gösterilmez.</p>
   </section>
 

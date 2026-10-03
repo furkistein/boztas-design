@@ -55,7 +55,7 @@
   // ---------- sayfa: görününce belir, videolar yalnız görünürken oynar ----------
   function sayfayiHazirla() {
     const belirler = document.querySelectorAll(
-      ".bolum-bas p, .kart, .hizmet-liste li, .surec-izgara > div, .iletisim > p, .iletisim .dugmeler");
+      ".bolum-bas p, .kart, .kat, .sayfa-alt, .ilgili, .kat-gecis a, .hizmet-liste li, .surec-izgara > div, .iletisim > p, .iletisim .dugmeler");
     belirler.forEach(el => el.classList.add("belir"));
     const gozcu = new IntersectionObserver(girdiler => {
       girdiler.forEach(g => { if (g.isIntersecting) { g.target.classList.add("gorundu"); gozcu.unobserve(g.target); } });
@@ -63,43 +63,8 @@
     belirler.forEach(el => gozcu.observe(el));
 
 
-    // portfolyo sekmeleri: süzme yalnız kartları gizler/gösterir, sayfa konumuna dokunmaz
-    const sekmeler = [...document.querySelectorAll(".sekmeler [role=tab]")];
-    if (sekmeler.length) {
-      const alan = document.getElementById("portfoy");
-      const kartlar = [...alan.querySelectorAll(".kart")];
-      const sayac = document.getElementById("sayac");
-      const sec = (sek, odak) => {
-        const f = sek.dataset.filtre;
-        sekmeler.forEach(b => { const acik = b === sek; b.setAttribute("aria-selected", acik); b.tabIndex = acik ? 0 : -1; });
-        alan.setAttribute("aria-labelledby", sek.id);
-        let n = 0;
-        kartlar.forEach(k => {
-          const goster = f === "hepsi" || k.dataset.kat.split(" ").includes(f);
-          if (goster && k.hidden) { k.classList.remove("gir"); void k.offsetWidth; k.classList.add("gir"); }
-          k.hidden = !goster; if (goster) n++;
-        });
-        alan.querySelectorAll(".kart-izgara").forEach(g => {
-          const bos = !g.querySelector(".kart:not([hidden])");
-          g.hidden = bos;
-          alan.querySelector('.grup-baslik[data-grup="' + g.dataset.grup + '"]').hidden = bos;
-        });
-        sayac.textContent = n + " iş" + (f === "hepsi" ? "" : " · " + sek.textContent);
-        if (odak) sek.focus();
-      };
-      sekmeler.forEach((b, i) => {
-        b.addEventListener("click", () => sec(b));
-        b.addEventListener("keydown", e => {
-          const git = { ArrowRight: (i + 1) % sekmeler.length, ArrowLeft: (i - 1 + sekmeler.length) % sekmeler.length, Home: 0, End: sekmeler.length - 1 }[e.key];
-          if (git === undefined) return;
-          e.preventDefault(); sec(sekmeler[git], true);
-        });
-      });
-      sec(sekmeler[0]);
-    }
-
     // bölüm başlıkları görününce harf harf
-    const basliklar = document.querySelectorAll(".bolum-bas h2:not([data-parcacik]), .iletisim .dev-baslik");
+    const basliklar = document.querySelectorAll(".bolum-bas h2:not([data-parcacik]), .sayfa-bas h1, .iletisim .dev-baslik");
     if (window.gsap && !azHareket) {
       basliklar.forEach(h => gsap.set(harflereBol(h), { yPercent: 115, opacity: 0 }));
       const baslikGozcu = new IntersectionObserver(girdiler => {
@@ -140,7 +105,7 @@
     // üst bar kahramanı geçince dolar
     const bar = document.querySelector(".ust-bar");
     const kahraman = document.querySelector(".kahraman");
-    new IntersectionObserver(([g]) => bar.classList.toggle("dolu", !g.isIntersecting), { rootMargin: "-72px 0px 0px 0px" })
+    if (kahraman) new IntersectionObserver(([g]) => bar.classList.toggle("dolu", !g.isIntersecting), { rootMargin: "-72px 0px 0px 0px" })
       .observe(kahraman);
   }
 
@@ -321,6 +286,7 @@
 
   // ---------- başlat ----------
   sayfayiHazirla();
+  if (!giris) return;   // kategori sayfalarında açılış yok
   let gorulduMu = false;
   try { gorulduMu = sessionStorage.getItem("giris-goruldu") === "1"; } catch (e) {}
 
