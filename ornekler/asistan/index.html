@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tuz &amp; Maya Fırın | SSS soru asistanı (konsept)</title>
+<meta name="description" content="Tuz &amp; Maya: kurgusal bir mahalle fırını için sitenin köşesinde çalışan soru asistanı. Yazım hatasını anlar, yalnız işletmenin onayladığı cevapları verir, bilmediğinde WhatsApp'a yönlendirir. boztas design konsept çalışması.">
+<meta name="theme-color" content="#F3ECDF">
+<link rel="icon" href="./simge.svg" type="image/svg+xml">
+<link rel="preload" href="./yazi/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./yazi/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./stil.css">
+</head>
+<body>
+<a class="atla" href="#icerik">İçeriğe geç</a>
+
+<header class="ust">
+  <a class="marka" href="./" aria-label="Tuz ve Maya, ana sayfa">Tuz<i>&amp;</i>Maya</a>
+  <div class="ust-sag">
+    <a class="geri" href="../../sayfalar/yazilim-otomasyon.html#soru-asistani">← boztas design</a>
+    <span class="rozet">konsept</span>
+  </div>
+</header>
+
+<main id="icerik">
+  <section class="kahraman" aria-labelledby="b1">
+    <div>
+      <span class="etiket">mahalle fırını · kurgusal marka</span>
+      <h1 id="b1">Ekşi maya,<br><em>otuz altı saat</em><br>sabır.</h1>
+      <p>Tuz &amp; Maya'nın sitesinde, sağ altta bir <b>soru asistanı</b> var. Saat, sipariş, alerjen, adres: işletmenin onayladığı cevapları verir, yanlış yazsanız da anlar, bilmediğinde uydurmaz.</p>
+      <div class="dugmeler">
+        <button class="dugme dolu" type="button" id="dene-ac">Asistana sorun</button>
+        <a class="dugme cizgi" href="#nasil">Nasıl çalışıyor?</a>
+      </div>
+    </div>
+    <div class="ekmek">
+      <img src="./ekmek.svg" width="640" height="640" alt="Üstten bakılan, üzeri kesilmiş ekşi mayalı bir ekmek" fetchpriority="high">
+      <div class="damga" aria-hidden="true"><span><b>07:30</b>ilk parti</span></div>
+    </div>
+  </section>
+
+  <section class="dene" aria-labelledby="dene-b">
+    <h2 id="dene-b">Şunları deneyin</h2>
+    <div class="dene-chipler" id="dene-chipler"></div>
+    <p>Düğmeler soruyu asistana gönderir. Kendi sorunuzu da yazın: hatalı yazımı, kısaltmayı, aksansız Türkçeyi tolere eder; listede olmayan konuda cevap uydurmaz.</p>
+  </section>
+
+  <section class="bolum" id="firin" aria-labelledby="firin-b">
+    <span class="etiket">01 · bugün fırında</span>
+    <h2 id="firin-b">Tezgâhta <em>neler var</em></h2>
+    <p class="giris-metin">Asistanın "ekmek ne zaman çıkıyor" ya da "fiyat" sorularında gösterdiği liste. Rakamlar ve ürünler örnektir.</p>
+    <ul class="firin" id="firin-liste"></ul>
+    <p class="kucuk-not">Fiyatlar örnektir, gerçek bir işletmeye ait değildir.</p>
+  </section>
+
+  <section class="koyu" id="nasil" aria-labelledby="nasil-b">
+    <div class="ic">
+      <span class="etiket">02 · nasıl çalışıyor</span>
+      <h2 id="nasil-b">Yapay zekâ <em>değil</em>,<br>işletmenin kendi cevapları.</h2>
+      <ol class="adimlar">
+        <li><h3>İşletme cevapları yazar</h3><p>Sık sorulan 18 soru ve cevabı işletmenin kendisi onaylar. Asistan bunların dışında tek kelime söylemez; fiyat, sağlık ya da yasal konuda kendi kendine yorum yapmaz.</p></li>
+        <li><h3>Soru, tarayıcıda eşleşir</h3><p>Sunucu, hesap ya da anahtar yok. Soru sadeleştirilir, yazım hatası ve kısaltmalar (zmn, nrde) tolere edilir; en yakın onaylı cevap seçilir.</p></li>
+        <li><h3>Emin değilse yönlendirir</h3><p>Eşleşme zayıfsa "şunu mu demek istediniz?" diye sorar; hiç yoksa soruyu hazır yazılı olarak işletmenin WhatsApp'ına taşır. Yanlış cevap vermektense bilmediğini söyler.</p></li>
+      </ol>
+      <div class="olcu" id="olcu" aria-label="Ölçümler">
+        <div><b id="o-cevap">18</b><span>onaylı cevap</span></div>
+        <div><b>0</b><span>sunucu isteği, anahtar ya da çerez</span></div>
+        <div><b id="o-ms">&lt;1</b><span>milisaniye: bir sorunun eşleşme süresi</span></div>
+        <div><b id="o-test">52/52</b><span>test sorusu doğru (yazım hatalılar ve kapsam dışılar dahil)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum" id="yapay-zeka" aria-labelledby="yz-b">
+    <div class="yz">
+      <div>
+        <span class="etiket">03 · yapay zekâlı sürüm (konsept)</span>
+        <h2 id="yz-b">Daha akıcı konuşan <em>sürüm</em> da kurulabilir</h2>
+        <div class="kars" role="group" aria-label="İki sürümün karşılaştırması">
+          <div><h3>Bu demo</h3><ul><li>Hazır, onaylı cevaplar</li><li>Sunucu ve anahtar yok</li><li>Aylık kullanım maliyeti yok</li><li>Her cevap öngörülebilir</li></ul></div>
+          <div><h3>Yapay zekâlı</h3><ul><li>Soruyu kendi cümleleriyle yanıtlar</li><li>Sunucu vekili ister</li><li>Kullanıma göre maliyet doğar</li><li>Yalnız onaylı metinden cevap verir</li></ul></div>
+        </div>
+        <p class="yz-not">Sağdaki video bu sürümün nasıl kurgulanacağını gösterir; canlı demoda yapay zekâ yoktur. Anahtar tarayıcıya hiç gitmez, kullanım sınırlıdır ve sağlık gibi hassas sorular yine WhatsApp'a gider.</p>
+      </div>
+      <div class="yz-video">
+        <video id="yz-video" controls preload="metadata" playsinline poster="./yz-poster.webp" aria-label="Yapay zekâlı sürümün çalışma şeması, sessiz kısa animasyon">
+          <source src="./yz-konsept.mp4" type="video/mp4">
+        </video>
+        <span class="yz-rozet">konsept animasyonu</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum" id="liste" aria-labelledby="sss-b" style="padding-top:0">
+    <div class="sss">
+      <div>
+        <span class="etiket">04 · onaylı cevap listesi</span>
+        <h2 id="sss-b">Asistanın <em>bildiği her şey</em> bu kadar</h2>
+        <p class="giris-metin" style="margin-bottom:0">Aynı liste sayfada da durur: asistanı açmak istemeyen ya da JavaScript'i kapalı olan ziyaretçi de cevabı bulur.</p>
+      </div>
+      <div id="sss-liste"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Tuz &amp; Maya kurgusal bir markadır. Adres, telefon, fiyat ve ürünler örnektir.</span>
+  <span>Yapım: <a href="../../index.html">boztas design</a> · konsept çalışması</span>
+</footer>
+
+<script src="./veri.js"></script>
+<script src="./eslestir.js"></script>
+<script src="./asistan.js"></script>
+<script>
+(function () {
+  var V = window.TUZMAYA, E = window.Eslestir;
+  var asistan = window.Asistan.baslat({ isletme: V.ISLETME, sss: V.SSS, whatsapp: null });
+
+  var denemeler = [
+    ["ekmek ne zmn çıkıyo", "yazım ve kısaltma"],
+    ["glutensz ekmek var mı", "alerji sorusu"],
+    ["pazar acık mısınz", "harf hatası"],
+    ["ofise 30 kişilik ikram", "toplu sipariş"],
+    ["dolar kaç lira", "kapsam dışı"]
+  ];
+  var kap = document.getElementById("dene-chipler");
+  denemeler.forEach(function (d) {
+    var b = document.createElement("button"); b.type = "button"; b.className = "dene-chip";
+    b.textContent = d[0]; var s = document.createElement("span"); s.textContent = d[1]; b.appendChild(s);
+    b.addEventListener("click", function () { asistan.sor(d[0]); });
+    kap.appendChild(b);
+  });
+  document.getElementById("dene-ac").addEventListener("click", function () { asistan.ac(); });
+
+  var firin = document.getElementById("firin-liste");
+  V.FIRIN.forEach(function (u) {
+    var li = document.createElement("li");
+    li.innerHTML = '<span class="ad"></span><span class="not"></span><span class="parti"></span><span class="fiyat"></span>';
+    li.querySelector(".ad").textContent = u.ad; li.querySelector(".not").textContent = u.not;
+    li.querySelector(".parti").textContent = u.parti;
+    li.querySelector(".fiyat").appendChild(document.createTextNode(u.fiyat + " ₺"));
+    firin.appendChild(li);
+  });
+
+  var l = document.getElementById("sss-liste");
+  V.SSS.forEach(function (e) {
+    var d = document.createElement("details"), s = document.createElement("summary"), p = document.createElement("p");
+    s.textContent = e.s; p.textContent = e.c; d.appendChild(s); d.appendChild(p); l.appendChild(d);
+  });
+  document.getElementById("o-cevap").textContent = V.SSS.length;
+})();
+</script>
+</body>
+</html>
